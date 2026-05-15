@@ -3,39 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maa Electronics (maesirodi) - सोलर एवं इलेक्ट्रॉनिक्स</title>
-    <!-- CSS फाइल को लिंक करना -->
+    <title>Maa Electronics - होम</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <div class="logo">Maa <span>Electronics</span></div>
-        <p class="id-tag">ID: maesirodi</p>
+        <nav>
+            <div class="logo">Maa <span>Electronics</span></div>
+            <ul>
+                <li><a href="index.html" class="active">होम</a></li>
+                <li><a href="about.html">हमारे बारे में</a></li>
+                <li><a href="shop.html">दुकान व गैलरी</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-text">
+        <div class="hero-content">
             <h1>सौर ऊर्जा अपनाएं, बिजली बिल शून्य बनाएं</h1>
-            <p>सिरोही की विश्वसनीय दुकान - Maa Electronics</p>
+            <p>सिरोही की भरोसेमंद दुकान - Maa Electronics (maesirodi)</p>
             <a href="#apply" class="btn-main">अभी आवेदन करें</a>
         </div>
     </section>
 
-    <div class="container">
-        <section id="about">
-            <h2 class="section-title">हमारे बारे में</h2>
-            <p><strong>Maa Electronics (maesirodi)</strong> सिरोड़ी और आसपास के क्षेत्रों में उच्च गुणवत्ता वाले सोलर पैनल, इनवर्टर और बैटरी प्रदान करने के लिए प्रतिबद्ध है।</p>
-        </section>
-
-        <section id="shop" class="shop-info">
-            <h2 class="section-title">दुकान की जानकारी</h2>
-            <p>📍 <strong>पता:</strong> मुख्य बाजार, सिरोड़ी, जिला: सिरोही (राज.)</p>
-            <p>📞 <strong>मोबाइल:</strong> +91 9653884240</p>
-            <p>⏰ <strong>समय:</strong> सुबह 9:00 - शाम 8:00 तक</p>
-        </section>
-
-        <section id="apply" class="apply-form">
+    <div class="container" id="apply">
+        <section class="apply-form">
             <h2>सोलर लगवाने हेतु आवेदन</h2>
             <form id="solarForm">
                 <input type="text" id="cust_name" placeholder="आपका नाम लिखें" required>
@@ -45,13 +37,13 @@
                     <option value="ऑफ-ग्रिड (Battery)">ऑफ-ग्रिड सोलर (बैटरी के साथ)</option>
                     <option value="सोलर पंप (खेती)">सोलर पंप (खेती के लिए)</option>
                 </select>
-                <button type="button" onclick="sendWhatsApp()">WhatsApp पर आवेदन भेजें</button>
+                <button type="button" class="btn-whatsapp" onclick="sendWhatsApp()">WhatsApp पर डिटेल्स भेजें</button>
             </form>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 Maa Electronics (maesirodi) | डिज़ाइन बाय गोविंद चौधरी</p>
+        <p>&copy; 2026 Maa Electronics | डिज़ाइन बाय गोविंद चौधरी | ID: maesirodi</p>
     </footer>
 
     <script>
@@ -62,18 +54,12 @@
             let type = document.getElementById('solar_type').value;
 
             if(name == "" || phone == "") {
-                alert("कृपया अपना नाम और मोबाइल नंबर भरें।");
+                alert("कृपया नाम और नंबर भरें!");
                 return;
             }
 
-            let msg = "नमस्ते *Maa Electronics (maesirodi)*,%0A%0A" + 
-                      "नया सोलर आवेदन प्राप्त हुआ है:%0A" + 
-                      "*नाम:* " + name + "%0A" + 
-                      "*मोबाइल:* " + phone + "%0A" + 
-                      "*प्रकार:* " + type;
-
-            let url = "https://wa.me/" + myNumber + "?text=" + msg;
-            window.open(url, '_blank').focus();
+            let msg = `नमस्ते Maa Electronics,%0Aनया आवेदन प्राप्त हुआ है:%0A*नाम:* ${name}%0A*मोबाइल:* ${phone}%0A*प्रकार:* ${type}`;
+            window.open(`https://wa.me/${myNumber}?text=${msg}`, '_blank');
         }
     </script>
 </body>
