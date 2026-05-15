@@ -1,0 +1,128 @@
+/* Maa Electronics (maesirodi) Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #1a2a3a;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f1c40f; /* पीला रंग सोलर के लिए */
+}
+
+.id-tag {
+    font-size: 0.8rem;
+    color: #bdc3c7;
+    margin-top: 5px;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1509391366360-fe5bb62955a2?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.btn-main {
+    background: #f1c40f;
+    color: #000;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.section-title {
+    margin-bottom: 15px;
+    color: #1a2a3a;
+}
+
+.shop-info {
+    background: #f4f7f6;
+    padding: 25px;
+    border-radius: 10px;
+    border-right: 6px solid #f1c40f;
+    margin: 30px 0;
+}
+
+.apply-form {
+    background: #1a2a3a;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.apply-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+    background: #25d366; /* WhatsApp Green */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #128c7e;
+}
+
+footer {
+    background: #111;
+    color: #999;
+    text-align: center;
+    padding: 25px;
+}
