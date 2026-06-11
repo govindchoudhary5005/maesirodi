@@ -1,66 +1,191 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
+    <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maa Electronics - होम</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MA ANJANI ENTERPRISES</title>
+    <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Maa <span>Electronics</span></div>
-            <ul>
-                <li><a href="index.html" class="active">होम</a></li>
-                <li><a href="about.html">हमारे बारे में</a></li>
-                <li><a href="shop.html">दुकान व गैलरी</a></li>
-            </ul>
-        </nav>
+
+    <header style="background: var(--dark); padding: 15px 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div style="max-width: 1100px; margin: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+            <div style="display: flex; align-items: center; gap: 15px; text-align: left;">
+                <img src="images/logo.jpg" alt="MAE Logo" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 8px rgba(251, 191, 36, 0.2);">
+                <div>
+                    <h1 style="font-size: 32px; letter-spacing: 1px; color: var(--primary); margin: 0; line-height: 1.2; font-weight: bold;">MA ANJANI ENTERPRISES</h1>
+                    <p style="color: #9ca3af; font-size: 13px; margin: 2px 0 0 0; letter-spacing: 1px;">Solar & Agriculture Solutions | SIRODI (SIROHI)</p>
+                </div>
+            </div>
+            <nav style="margin-top: 0; display: flex; align-items: center; gap: 10px;">
+                <a href='index.html' style="margin: 0 10px;"><i class="fas fa-home"></i> Home</a>
+                <a href='about.html' style="margin: 0 10px;"><i class="fas fa-user"></i> About</a>
+                <a href='gallery.html' style="margin: 0 10px;"><i class="fas fa-images"></i> Gallery</a>
+                <a href='contact.html' style="margin: 0 10px;"><i class="fas fa-phone-alt"></i> Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>सौर ऊर्जा अपनाएं, बिजली बिल शून्य बनाएं</h1>
-            <p>सिरोही की विश्वसनीय दुकान - Maa Electronics (maesirodi)</p>
-            <a href="#apply" class="btn-main">अभी आवेदन करें</a>
+    <div class='container'>
+        <div class="slider-container">
+            <div class="slide" style="background-image: url('images/banner.jpg');">
+                <div class="slide-text"><h3>नया भारत, नया सोलर! सबसे भरोसेमंद सोलर समाधान।</h3></div>
+            </div>
+            <div class="slide" style="background-image: url('images/roof-solar.jpg');">
+                <div class="slide-text"><h3>PM - सूर्या घर योजना: ₹78,000/- तक की भारी सब्सिडी!</h3></div>
+            </div>
+            <div class="slide" style="background-image: url('images/field-solar.jpg');">
+                <div class="slide-text"><h3>खेतों के लिए दमदार सोलर वॉटर पंप सॉल्यूशन्स</h3></div>
+            </div>
         </div>
-    </section>
 
-    <div class="container" id="apply">
-        <section class="apply-form">
-            <h2>सोलर लगवाने हेतु आवेदन</h2>
-            <form id="solarForm">
-                <input type="text" id="cust_name" placeholder="आपका पूरा नाम" required>
-                <input type="tel" id="cust_phone" placeholder="आपका मोबाइल नंबर" required>
-                <select id="solar_type">
-                    <option value="घरेलू (On-Grid)">घरेलू सोलर (On-Grid)</option>
-                    <option value="ऑफ-ग्रिड (Battery)">ऑफ-ग्रिड सोलर (बैटरी के साथ)</option>
-                    <option value="सोलर पंप (खेती)">सोलर पंप (खेती के लिए)</option>
+        <div class='card' style="text-align: center;">
+            <h2>Solar & Agriculture Solutions</h2>
+            <p style="font-size: 17px;">MA ANJANI ENTERPRISES SIRODI में आपका स्वागत है। हम आपके खेतों और घरों को स्वच्छ सौर ऊर्जा से रोशन करते हैं।</p>
+            <a class='btn' href='contact.html'>फ्री कोटेशन पाएं</a>
+        </div>
+
+        <div class="card" style="background: linear-gradient(135deg, #fffbeb, #fff); border-left: 5px solid #f59e0b;">
+            <h3 style="color: #b45309;"><i class="fas fa-bolt"></i> महाधमाका ऑफर: PM - सूर्या घर मुफ़्त बिजली योजना</h3>
+            <p style="font-size: 17px; margin-top: 10px;">अपने घरों पर मुफ्त में सोलर लगाने के लिए आज ही संपर्क करें और पाइए सरकार की तरफ से <b>₹78,000/- से ₹95,000/-</b> तक का बम्पर लाभ!</p>
+            <table class="subsidy-table">
+                <thead>
+                    <tr><th>सिस्टम क्षमता</th><th>अनुमानित सब्सिडी लाभ</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>3 KW रूफटॉप सिस्टम</td><td>₹78,000/- से ₹95,000/- तक लाभ</td></tr>
+                    <tr><td>3 KW से अधिक क्षमता</td><td>₹78,000/- से ₹95,000/- तक लाभ</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- भरोसेमंद ऑथराइज्ड ब्रांड्स -->
+        <div class="card">
+            <h3 class="section-title"><i class="fas fa-handshake"></i> हमारे भरोसेमंद ऑथराइज्ड ब्रांड्स</h3>
+            <p style="color: #6b7280; font-size: 15px; text-align: center; margin-top: -10px;">Solar, Agriculture & Structural Solutions Under One Roof</p>
+            <div class="brands-grid">
+                <div class="brand-logo-card" title="latteys Solar"><img src="images/1001318758.jpg" alt="Tata Solar"></div>
+                <div class="brand-logo-card" title="Adani Solar"><img src="images/1001318764.jpg" alt="Adani Solar"></div>
+                <div class="brand-logo-card" title="Luminous Solar"><img src="images/1001318766.jpg" alt="Luminous Solar"></div>
+                <div class="brand-logo-card" title="UTL Solar"><img src="images/1001318762.jpg" alt="UTL Solar"></div>
+                <div class="brand-logo-card" title="Oswal Solar"><img src="images/1001318791.jpg" alt="Oswal Solar"></div>
+                <div class="brand-logo-card" title="Shakti Pumps"><img src="images/1001318793.jpg" alt="Shakti Pumps"></div>
+                <div class="brand-logo-card" title="Tata Structura (Steel Pipes)"><img src="images/1001318776.jpg" alt="Tata Structura"></div>
+                <div class="brand-logo-card" title="APL Apollo Steel Pipes"><img src="images/1001318759.jpg" alt="APL Apollo"></div>
+                <div class="brand-logo-card" title="Polycab Wires & Cables"><img src="images/1001318775.jpg" alt="Polycab"></div>
+                <div class="brand-logo-card" title="Havells India"><img src="images/1001318777.jpg" alt="Havells"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 class="section-title"><i class="fas fa-shield-alt"></i> हमारे साथ सोलर सिस्टम लगाने के बेजोड़ लाभ</h3>
+            <p style="text-align: center; color: #6b7280;">All Brands Under 1 Roof</p>
+            <ul class="benefits-list">
+                <li><i class="fas fa-check-circle"></i> <span><b>सोलर पैनल पर 30 साल की वारंटी</b></span></li>
+                <li><i class="fas fa-check-circle"></i> <span><b>इन्वर्टर पर 8-10 वर्ष की दमदार वारंटी</b></span></li>
+                <li><i class="fas fa-check-circle"></i> <span><b>5 वर्ष की बिल्कुल मुफ्त सर्विस</b></span></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="section-title"><i class="fas fa-calculator"></i> सोलर लोड कैलकुलेटर</h3>
+            <p style="text-align:center; margin-bottom: 20px; color:#6b7280;">पता करें कि आपको कितने किलोवाट (KW) सोलर की आवश्यकता है</p>
+            <div class="calc-group">
+                <label>अपना मासिक बिजली बिल चुनें (₹):</label>
+                <select id="bill-amount">
+                    <option value="1000">₹1,000 तक</option>
+                    <option value="3000">₹1,000 से ₹3,000</option>
+                    <option value="6000">₹3,000 से ₹6,000</option>
+                    <option value="10000">₹6,000 से अधिक</option>
                 </select>
-                <button type="button" class="btn-whatsapp" onclick="sendWhatsApp()">WhatsApp पर डिटेल्स भेजें</button>
-            </form>
-        </section>
+            </div>
+            <button class="btn" style="width: 100%;" onclick="calculateSolar()">कैलकुलेट करें</button>
+            <div id="calc-result">
+                <h4><b>आपके लिए सही सुझाव:</b></h4>
+                <p id="calc-text" style="margin-top: 5px;"></p>
+            </div>
+        </div>
+<div class="stats-container">
+  <div class="stat-box">
+    <div class="counter" data-target="2000">0</div>
+    <p>Happy Customers</p>
+  </div>
+  
+  <div class="stat-box">
+    <div class="counter" data-target="50">0</div>
+    <p>Services Offered</p>
+  </div>
+  
+  <div class="stat-box">
+    <div class="counter" data-target="20">0</div>
+    <p>Years Experience</p>
+  </div>
+</div>
+        <div class="card">
+    <h3 class="section-title"><i class="fas fa-map-marked-alt"></i> हमारी लोकेशन</h3>
+    <p style="text-align: center; color: #6b7280; margin-top: -10px; margin-bottom: 20px;">MA ANJANI ENTERPRISES, Near Ashapura Hotel, Highway Road, Sirodi</p>
+    <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.6445266488668!2d72.68515347413548!3d24.711095851220367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39432b68b258b015%3A0xba2a33b1a8358bfd!2sMa%20Anjani%20Enterprises!5e1!3m2!1sen!2sin!4v1781161936275!5m2!1sen!2sin" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Maa Electronics | डिज़ाइन बाय गोविंद चौधरी | ID: maesirodi</p>
-    </footer>
+    <a href="tel:+919653884240" class="floating-btn call-btn" title="Call Us Now"><i class="fas fa-phone-alt"></i></a>
+    <a href="https://instagram.com/maesirodi_2021" target="_blank" class="floating-btn insta-btn" title="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/919653884240?text=Hello%20Chhatra%20Ram%20Ji,%20I%20want%20to%20know%20about%20PM%20Surya%20Ghar%20Solar%20Scheme." target="_blank" class="floating-btn whatsapp-btn" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <footer>© 2026 MA ANJANI ENTERPRISES - All Rights Reserved.</footer>
 
     <script>
-        function sendWhatsApp() {
-            let myNumber = "919653884240";
-            let name = document.getElementById('cust_name').value;
-            let phone = document.getElementById('cust_phone').value;
-            let type = document.getElementById('solar_type').value;
-
-            if(name == "" || phone == "") {
-                alert("कृपया नाम और नंबर भरें!");
-                return;
-            }
-
-            let msg = `नमस्ते Maa Electronics,%0Aनया आवेदन प्राप्त हुआ है:%0A*नाम:* ${name}%0A*मोबाइल:* ${phone}%0A*प्रकार:* ${type}`;
-            window.open(`https://wa.me/${myNumber}?text=${msg}`, '_blank');
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 4000);
+        }
+        function calculateSolar() {
+            let bill = document.getElementById("bill-amount").value;
+            let resultDiv = document.getElementById("calc-result");
+            let resultText = document.getElementById("calc-text");
+            let kw = "1 KW";
+            if(bill == "3000") { kw = "2 KW - 3 KW"; }
+            else if(bill == "6000") { kw = "3 KW - 5 KW"; }
+            else if(bill == "10000") { kw = "5 KW से अधिक"; }
+            resultText.innerHTML = "आपको लगभग <b>" + kw + "</b> सोलर सिस्टम की आवश्यकता है। इस पर आपको ₹78,000 से ₹95,000 तक की पीएम सूर्य घर सब्सिडी का सीधा लाभ मिलेगा!";
+            resultDiv.style.display = "block";
         }
     </script>
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 200; // Animation ki speed dynamic rakhne ke liye
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const inc = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + inc);
+        setTimeout(updateCount, 15);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+    updateCount();
+  });
+</script>
 </body>
 </html>
